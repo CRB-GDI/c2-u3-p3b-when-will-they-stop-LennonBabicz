@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Claims;
 using LinkedLists;
 
 namespace ProgrammingAssignment2
@@ -33,12 +34,32 @@ namespace ProgrammingAssignment2
 				// and the comment below. You can of
 				// course add more space between the
 				// comments as needed
+				
+				//declared variables
+				int value = GetValue();
+				int sum = 0;
+				int numbercount = 0;
+                float mean = 0f;
+             
+				//while statement
+				while (value != -1)
+				{
+					numbercount++;
+					sum = sum + value ;
+					value = GetValue();
+                }
+				//gives the results
+				if (numbercount > 0)
+				{
+					mean = (float)sum / numbercount;
+				}
+              //prints results
+				Console.WriteLine(numbercount + " " + mean);
 
 
-
-				// Don't add or modify any code below
-				// this comment
-				input = Console.ReadLine();
+                // Don't add or modify any code below
+                // this comment
+                input = Console.ReadLine();
 			}
 		}
 
